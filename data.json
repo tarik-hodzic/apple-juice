@@ -1,0 +1,24 @@
+[
+    {
+      "name": "Apple Juice - Fresh",
+      "description": "Tasty, fresh apple juice, satisfyingly crisp.",
+      "price": "$3.99",
+      "image": "images/product1.jpg",
+      "detailsUrl": "product1.html"
+    },
+    {
+      "name": "Apple Juice - Organic",
+      "description": "Organic apple juice with no added sugar.",
+      "price": "$4.99",
+      "image": "images/product2.jpg",
+      "detailsUrl": "product2.html"
+    },
+    {
+      "name": "Apple Juice - Sparkling",
+      "description": "Sparkling apple juice for a refreshing taste.",
+      "price": "$5.49",
+      "image": "images/product3.jpg",
+      "detailsUrl": "product3.html"
+    }
+  ]
+  

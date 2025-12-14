@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apple Juice</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.cdnfonts.com/css/vegan-style-personal-use" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Bebas Neue' rel='stylesheet'>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
+  <link rel="icon" href="images/icon.png">
+</head>
+<body>
+  <nav id="navbar" class="navbar black">
+    <a href="#" class="logo">Apple Juice</a>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#newbie">Newbie?</a></li>
+    </ul>
+    <button id="theme-toggle" class="navbar-btn">Dark Mode</button>
+  </nav>
+
+  <!-- About us -->
+
+  <section class="all-sections-light">
+    <div class="container">
+      <div class="aboutus-wrapper">
+        <div class="aboutus-text-wrapper">
+      <h1 class="section-heading-left">About us</h1>
+      <p class="aboutus-text">Welcome to Green Apple Juice, where we believe in the power of nature to refresh and revitalize. 
+        Founded with a passion for healthy living and sustainability, our company is dedicated to producing the finest quality apple 
+        juice made from 100% organic green apples. Our journey began with a simple idea: to create a beverage that not only tastes great
+         but also supports a healthy lifestyle. Every apple is carefully selected from trusted local orchards, ensuring that only the best fruit
+          goes into our juice. This dedication to quality and our love for the environment is at the heart of everything we do.</p>
+          <div id="details" style="display: none;">
+            <p class="details-text">At Green Apple Juice, we take pride in every step of our process, from orchard to bottle.
+               Each apple is handpicked at the peak of ripeness, guaranteeing maximum flavor and nutritional value in every sip.
+                We prioritize sustainability at every turn, employing eco-friendly practices.</p>
+          </div>
+          <button id="view-more">View More</button>
+        </div>
+        <div class="aboutus-img-wrapper">
+          <img src="images/resized.jpg" alt="juice">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Products -->
+
+  <section class="all-sections-black" id="products-section">
+    <div class="container">
+      <h1 class="section-heading-white product-heading">Our Products</h1>
+      <div id="product-list"></div>
+    </div>
+  </section>
+
+  <!-- GALERIJA -->
+
+  <section id="gallery" class="all-sections">
+    <div class="container">
+      <h1 class="section-heading">Gallery</h1>
+      <div class="gallery">
+    <div class="gallery-item">
+      <img src="images/image1.jpg" alt="Image 1" class="gallery-image" onclick="openModal('images/image1.jpg')">
+    </div>
+    <div class="gallery-item">
+      <img src="images/image2.jpg" alt="Image 2" class="gallery-image" onclick="openModal('images/image2.jpg')">
+    </div>
+    <div class="gallery-item">
+      <img src="images/image3.jpg" alt="Image 3" class="gallery-image" onclick="openModal('images/image3.jpg')">
+    </div>
+    <div class="gallery-item">
+      <img src="images/image4.jpg" alt="Image 4" class="gallery-image" onclick="openModal('images/image4.jpg')">
+    </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Modal za prikaz povecane slike -->
+    <div id="modal" class="modal">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <img src="" alt="Modal Image" id="modal-image" class="modal-content">
+    </div>
+  </div>
+
+  <!-- FAQ -->
+<section id="faq" class="all-sections-black">
+  <div class="container">
+    <h1 class="section-heading-white">FAQ</h1>
+    <h5 class="section-subtitle">here we are</h5>
+  <div id="faq-container">
+    <div class="faq-section">
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleContent('answer1')">What is your return policy?</button>
+        <div id="answer1" class="faq-answer">
+          <p>Our return policy is 30 days with a receipt.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleContent('answer2')">How do I track my order?</button>
+        <div id="answer2" class="faq-answer">
+          <p>You can track your order using the tracking number provided in your order confirmation email.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleContent('answer3')">Can I purchase items online?</button>
+        <div id="answer3" class="faq-answer">
+          <p>Yes, you can purchase items through our website.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button id="toggle-faq-visibility" onclick="toggleFAQVisibility()">HIDE</button>
+</div>
+</section>
+
+<!-- ADVANCED FORM & AJAX SUBMISSION -->
+
+<section id="newbie" class="all-sections">
+  <div class="container">
+    <h1 class="section-heading">Contact Us</h1>
+  <form> 
+    <div class="form-group"> 
+      <label for="user">Username:</label> 
+      <input type="text" name="username" id="usernames" class="form-control"> 
+      <h5 id="usercheck">Username is missing</h5> 
+    </div> 
+
+    <div class="form-group"> 
+      <label for="user">Email:</label> 
+      <input type="email" name="email" id="email" required class="form-control"> 
+      <small id="emailvalid" class="form-text text-muted invalid-feedback">Your email must be a valid email</small> 
+    </div> 
+
+    <div class="form-group"> 
+      <label for="password">Password:</label> 
+      <input type="password" name="pass" id="password" class="form-control"> 
+      <h5 id="passcheck">Please fill the password</h5> 
+    </div> 
+
+    <div class="form-group"> 
+      <label for="conpassword">Confirm Password:</label> 
+      <input type="password" name="username" id="conpassword" class="form-control"> 
+      <h5 id="conpasscheck">Password didn't match</h5> 
+    </div> 
+
+    <input type="submit" id="submitbtn" value="SUBMIT" class="btn btn-primary"> 
+   </form> 
+   <h5 id="success-message"></h5>
+  </div> 
+</section>
+
+<!-- Footer --> 
+
+<footer class="footer">
+  <div class="container">
+  <div class="footer-content">
+    <div class="footer-column">
+      <a href="#" class="footer-logo">Apple Juice</a>
+    </div>
+    <div class="footer-column">
+      <a href="#home" class="footer-links">Home</a>
+      <a href="#faq" class="footer-links">FAQ</a>
+      <a href="#gallery" class="footer-links">Gallery</a>
+      <a href="#newbie" class="footer-links">Newbie?</a>
+    </div>
+    <div class="footer-column">
+      <h4>Which country are you coming from?</h4>
+      <div class="country-content-wrapper">
+      <div class="country-selector">
+           <div id="country-content" class="country-content"></div>
+        </div>
+    </div>
+  </div>
+</div>
+</footer>
+
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"> </script> 
+  <!-- Popper JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>  
+  <!-- Including app.js jQuery Script -->
+  <script src="app.js"></script> 
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/jquery.validation/1.19.3/jquery.validate.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
