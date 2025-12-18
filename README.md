@@ -1,6 +1,6 @@
 <h1>Apple Juice – Landing Page</h1>
 
-Apple Juice is a simple landing page created for promoting a juice manufacturer and for practicing core front-end development skills.  
+Apple Juice is a simple landing page created for promoting a juice manufacturer working with core front-end development skills.  
 The project focuses on clean layout, basic interactivity, and improving JavaScript fundamentals.
 
 <h2>Technologies Used</h2>
@@ -14,7 +14,7 @@ The project focuses on clean layout, basic interactivity, and improving JavaScri
 This project was built to:
 
 - Create a basic landing page for juice product promotion  
-- Practice JavaScript fundamentals and DOM manipulation  
+- Apply JavaScript fundamentals and DOM manipulation  
 - Work with JSON data and dynamic content rendering  
 - Implement basic UI features such as theme switching  
 
